@@ -1,0 +1,57 @@
+rm: cannot remove ‘new_core1.out’: No such file or directory
+Traceback (most recent call last):
+  File "rl_pwr.py", line 136, in <module>
+    rl1 = RL_4ass(options)
+  File "/home/cgmaras/Python/CameronRL/test_import.py", line 21, in __init__
+    self.impose_state(options["initial_state"])
+  File "/home/cgmaras/Python/CameronRL/test_import.py", line 95, in impose_state
+    self.criteria = self.rwd.get_criteria()
+  File "/home/cgmaras/Python/CameronRL/getcriteria.py", line 34, in get_criteria
+    object = output()
+  File "/home/cgmaras/Python/CameronRL/Output_Search.py", line 184, in __init__
+    pdf.savefig()
+  File "/usr/lib64/python3.4/site-packages/matplotlib/backends/backend_pdf.py", line 2537, in savefig
+    **kwargs)
+  File "/usr/lib64/python3.4/site-packages/matplotlib/figure.py", line 1834, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/usr/lib64/python3.4/site-packages/matplotlib/backend_bases.py", line 2267, in print_figure
+    **kwargs)
+  File "/usr/lib64/python3.4/site-packages/matplotlib/backends/backend_pdf.py", line 2592, in print_pdf
+    self.figure.draw(renderer)
+  File "/usr/lib64/python3.4/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/usr/lib64/python3.4/site-packages/matplotlib/figure.py", line 1299, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/usr/lib64/python3.4/site-packages/matplotlib/image.py", line 138, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/usr/lib64/python3.4/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/usr/lib64/python3.4/site-packages/matplotlib/axes/_base.py", line 2437, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/usr/lib64/python3.4/site-packages/matplotlib/image.py", line 138, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/usr/lib64/python3.4/site-packages/matplotlib/artist.py", line 55, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/usr/lib64/python3.4/site-packages/matplotlib/axis.py", line 1135, in draw
+    renderer)
+  File "/usr/lib64/python3.4/site-packages/matplotlib/axis.py", line 1075, in _get_tick_bboxes
+    extent = tick.label1.get_window_extent(renderer)
+  File "/usr/lib64/python3.4/site-packages/matplotlib/text.py", line 933, in get_window_extent
+    bbox, info, descent = self._get_layout(self._renderer)
+  File "/usr/lib64/python3.4/site-packages/matplotlib/text.py", line 308, in _get_layout
+    ismath=False)
+  File "/usr/lib64/python3.4/site-packages/matplotlib/backends/backend_pdf.py", line 2157, in get_text_width_height_descent
+    renderer=self)
+  File "/usr/lib64/python3.4/site-packages/matplotlib/texmanager.py", line 604, in get_text_width_height_descent
+    page = next(iter(dvi))
+  File "/usr/lib64/python3.4/site-packages/matplotlib/dviread.py", line 249, in __iter__
+    have_page = self._read()
+  File "/usr/lib64/python3.4/site-packages/matplotlib/dviread.py", line 310, in _read
+    self._dtable[byte](self, byte)
+  File "/usr/lib64/python3.4/site-packages/matplotlib/dviread.py", line 166, in wrapper
+    return method(self, *[f(self, byte-min) for f in get_args])
+  File "/usr/lib64/python3.4/site-packages/matplotlib/dviread.py", line 457, in _fnt_def
+    self._fnt_def_real(k, c, s, d, a, l)
+  File "/usr/lib64/python3.4/site-packages/matplotlib/dviread.py", line 468, in _fnt_def_real
+    raise error_class("missing font metrics file: %s" % fontname)
+FileNotFoundError: missing font metrics file: cmss10
